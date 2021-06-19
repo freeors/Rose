@@ -1,0 +1,1047 @@
+//______________________________________________________________________________________
+// Program : OpenCV based QR code Detection and Retrieval
+// Author  : Bharath Prabhuswamy
+// Github  : https://github.com/bharathp666/opencv_qr
+//______________________________________________________________________________________
+
+#include <opencv2/opencv.hpp>
+#include "global.hpp"
+
+#include <iostream>
+#include <cmath>
+#include "sdl_utils.hpp"
+#include "wml_exception.hpp"
+#include "qr_code.hpp"
+
+#include "rose_config.hpp"
+#include "preferences.hpp"
+#include "font.hpp"
+#include "gettext.hpp"
+
+#include "zxing/ReadBarcode.h"
+#include "zxing/TextUtfEncoding.h"
+
+#include "zxing/BarcodeFormat.h"
+#include "zxing/MultiFormatWriter.h"
+#include "zxing/BitMatrix.h"
+#include "zxing/ByteMatrix.h"
+#include "zxing/TextUtfEncoding.h"
+#include "zxing/ZXStrConvWorkaround.h"
+
+
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
+void verbose_draw_contours(const cv::Mat& bgr, const cv::Mat& gray_edges, const std::vector<std::vector<cv::Point> >& contours, const std::vector<cv::Vec4i>& hierarchy)
+{
+	VALIDATE(bgr.cols == gray_edges.cols && bgr.rows == gray_edges.rows, null_str);
+	VALIDATE(contours.size() == hierarchy.size(), null_str);
+
+	VALIDATE(gray_edges.channels() == 1, null_str);
+	cv::Mat edges;
+	cv::cvtColor(gray_edges, edges, cv::COLOR_GRAY2BGRA);
+
+	std::vector<cv::Scalar> line_colors;
+	line_colors.push_back(cv::Scalar(0, 0, 255));
+	line_colors.push_back(cv::Scalar(0, 255, 0));
+	line_colors.push_back(cv::Scalar(255, 0, 0));
+	line_colors.push_back(cv::Scalar(0, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 0, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 0));
+
+	line_colors.push_back(cv::Scalar(128, 128, 255));
+	line_colors.push_back(cv::Scalar(128, 255, 128));
+	line_colors.push_back(cv::Scalar(255, 128, 128));
+	line_colors.push_back(cv::Scalar(128, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 128, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 128));
+	int color_at = 0;
+
+	int contour_at = 0;
+	for (std::vector<std::vector<cv::Point> >::const_iterator it = contours.begin(); it != contours.end(); ++ it, contour_at ++) {
+		const cv::Vec4i& h = hierarchy[contour_at];
+		const std::vector<cv::Point>& contour = *it;
+		for (std::vector<cv::Point>::const_iterator it2 = contour.begin(); it2 != contour.end(); ++ it2) {
+			const cv::Point& pt = *it2;
+			if (pt.x == 208 && pt.y == 359) {
+				int ii = 0;
+			}
+			// circle(bgr, pt, 0, line_colors[color_at], -1);
+		}
+		color_at ++;
+		if (color_at == line_colors.size()) {
+			color_at = 0;
+		}
+	}
+
+	std::set<int> selected;
+	selected.insert(29);
+	selected.insert(46);
+	selected.insert(48);
+
+	int contour_count = contours.size();
+	for (int i = 0; i < contour_count; i ++) {
+		const cv::Vec4i& h = hierarchy[i];
+		if (h[3] == -1) {
+			// continue;
+		}
+		// if (selected.count(i) == 0) { // 1.png
+		if (i != 1658) { // 2.png
+			// continue;
+		}
+		drawContours(bgr, contours, i, line_colors[color_at], 1, 8, hierarchy, 0);
+		color_at ++;
+		if (color_at == line_colors.size()) {
+			color_at = 0;
+		}
+	}
+
+/*
+	int channels = image.channels();
+	VALIDATE(channels == 1, null_str);
+	cv::Mat out;
+	cv::cvtColor(image, out, cv::COLOR_GRAY2BGRA);
+	imwrite(out, "qr-o-Edges.png");
+*/
+	imwrite(bgr, "qr-o-verbose-image.png");
+	imwrite(edges, "qr-o-verbose-edges.png");
+
+	int ii = 0;
+}
+
+void verbose_draw_contours2(const cv::Mat& gray, const std::vector<std::vector<cv::Point> >& contours, const std::vector<cv::Vec4i>& hierarchy)
+{
+	VALIDATE(contours.size() == hierarchy.size(), null_str);
+	VALIDATE(gray.channels() == 1, null_str);
+
+	cv::Mat bgr;
+	cv::cvtColor(gray, bgr, cv::COLOR_GRAY2BGR);
+
+	std::vector<cv::Scalar> line_colors;
+	line_colors.push_back(cv::Scalar(0, 0, 255));
+	line_colors.push_back(cv::Scalar(0, 255, 0));
+	line_colors.push_back(cv::Scalar(255, 0, 0));
+	line_colors.push_back(cv::Scalar(0, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 0, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 0));
+
+	line_colors.push_back(cv::Scalar(128, 128, 255));
+	line_colors.push_back(cv::Scalar(128, 255, 128));
+	line_colors.push_back(cv::Scalar(255, 128, 128));
+	line_colors.push_back(cv::Scalar(128, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 128, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 128));
+	int color_at = 0;
+
+	int contour_count = contours.size();
+	for (int i = 0; i < contour_count; i ++) {
+		drawContours(bgr, contours, i, line_colors[color_at], 1, 8, hierarchy, 0);
+		color_at ++;
+		if (color_at == line_colors.size()) {
+			color_at = 0;
+		}
+	}
+
+	imwrite(bgr, "qr-o-verbose-2-image.png");
+}
+
+void overlay_contours(cv::Mat& bgra, const std::vector<std::vector<cv::Point> >& contours, const std::vector<cv::Vec4i>& hierarchy)
+{
+	VALIDATE(contours.size() == hierarchy.size(), null_str);
+	VALIDATE(bgra.channels() == 4, null_str);
+
+	std::vector<cv::Scalar> line_colors;
+	line_colors.push_back(cv::Scalar(0, 0, 255, 255));
+	line_colors.push_back(cv::Scalar(0, 255, 0, 255));
+	line_colors.push_back(cv::Scalar(255, 0, 0, 255));
+	line_colors.push_back(cv::Scalar(0, 255, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 0, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 0, 255));
+
+	line_colors.push_back(cv::Scalar(128, 128, 255, 255));
+	line_colors.push_back(cv::Scalar(128, 255, 128, 255));
+	line_colors.push_back(cv::Scalar(255, 128, 128, 255));
+	line_colors.push_back(cv::Scalar(128, 255, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 128, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 128, 255));
+	int color_at = 0;
+
+	int contour_count = contours.size();
+	for (int i = 0; i < contour_count; i ++) {
+		drawContours(bgra, contours, i, line_colors[color_at], 1, 8, hierarchy, 0);
+		color_at ++;
+		if (color_at == line_colors.size()) {
+			color_at = 0;
+		}
+	}
+}
+
+class QrParse
+{
+public:
+	QrParse()
+		: ppt_(false) // if want to set ppt_, set here.
+		, ppt_step_(0)
+		, ppt_gap_(16)
+		, ppt_name_font_size_(font::SIZE_LARGEST * 2)
+		, ppt_name_line_height_(font::SIZE_LARGEST * 2)
+		, ppt_next_step_offset_({0, 0})
+		, ppt_max_line_height_(0)
+	{
+		ppt_ = game_config::os == os_windows && ppt_;
+	}
+
+	cv::Mat FindQrPoint(const cv::Mat& bgr);
+	int FindQrPoint2(const cv::Mat& bgr, std::vector<std::vector<cv::Point> >& qrPoint);
+
+private:
+	struct tmark {
+		tmark()
+			: contour_at(nposm)
+		{
+			center.x = nposm;
+			center.y = nposm;
+		}
+
+		tmark(int contour_at, const SDL_Point& center, const SDL_Rect& rect)
+			: contour_at(contour_at)
+			, center(center)
+			, rect(rect)
+		{}
+
+		bool valid() const { return contour_at != nposm && center.x != nposm && center.y != nposm; }
+
+		int contour_at;
+		SDL_Point center;
+		SDL_Rect rect;
+	};
+
+	struct tppt_lock {
+		tppt_lock(QrParse& parse, const surface& surf);
+		~tppt_lock();
+
+	private:
+		QrParse& parse_;
+	};
+
+	bool IsQrMark(const std::vector<cv::Point>& contour, const cv::Mat& gray, int at, int max_mark_size, const std::vector<QrParse::tmark>& existed_marks, tmark& mark) const;
+	int IsQrColorRateAxis(const cv::Mat& binary_src, int at, bool x_axis) const;
+	bool IsQrRate(float rate) const;
+	bool AdjustQrPoint(const std::vector<tmark>& markSrc, std::vector<tmark>& markDest);
+	SDL_Rect min_enclosed_rect(const SDL_Rect& rect0, const SDL_Rect& rect1, const SDL_Rect& rect2) const;
+
+	void insert_ppt(const surface& surf, const std::string& name, bool step);
+
+private:
+	bool ppt_;
+	surface ppt_bg_;
+	int ppt_step_;
+	const int ppt_gap_;
+	const int ppt_name_font_size_;
+	const int ppt_name_line_height_;
+	SDL_Point ppt_next_step_offset_;
+	int ppt_max_line_height_;
+
+};
+
+void bolden_binary_gray(cv::Mat& src)
+{
+	VALIDATE(src.channels() == 1, null_str);
+
+	// reference to https://blog.csdn.net/bigFatCat_Tom/article/details/94719156
+	uint8_t* preview_data = nullptr;
+	uint8_t* next_data = nullptr;
+	int value;
+	for (int row = 0; row < src.rows; row ++) {
+		uint8_t* data = src.ptr<uint8_t>(row);
+		next_data = row != src.rows - 1? src.ptr<uint8_t>(row + 1): nullptr;
+		for (int col = 0; col < src.cols; col ++) {
+			value = data[col];
+			if (value == 255) {
+				if (preview_data != nullptr) {
+					preview_data[col] = 255;
+				}
+				if (col != 0) {
+					data[col - 1] = 255;
+				}
+			}
+		}
+		preview_data = data;
+	}
+}
+
+QrParse::tppt_lock::tppt_lock(QrParse& parse, const surface& surf)
+	: parse_(parse)
+{
+	VALIDATE(parse.ppt_ && surf.get() != nullptr, null_str);
+	VALIDATE(parse.ppt_step_ == 0 && parse.ppt_max_line_height_ == 0, null_str);
+	VALIDATE(parse.ppt_next_step_offset_.x == 0 && parse.ppt_next_step_offset_.y == 0, null_str);
+	VALIDATE(parse.ppt_bg_.get() == nullptr, null_str);
+
+	const int step_per_line = 4;
+	const int lines_per_ppt = 4;
+	parse.ppt_bg_ = create_neutral_surface((surf->w + parse.ppt_gap_) * step_per_line, (parse.ppt_name_line_height_ + surf->h + parse.ppt_gap_) * lines_per_ppt, false);
+	fill_surface(parse.ppt_bg_, 0xffffffff);
+
+	surface text_surf = font::get_rendered_text(_("qrcode^source"), 0, parse.ppt_name_font_size_, font::BLACK_COLOR);
+	SDL_Rect dst_rect{(surf->w - text_surf->w) / 2, (parse.ppt_name_line_height_ - text_surf->h) / 2, text_surf->w, text_surf->h};
+	sdl_blit(text_surf, nullptr, parse.ppt_bg_, &dst_rect);
+
+	dst_rect = ::create_rect(0, parse.ppt_name_line_height_, surf->w, surf->h);
+	sdl_blit(surf, nullptr, parse.ppt_bg_, &dst_rect);
+	parse.ppt_step_ ++;
+	parse.ppt_next_step_offset_.x = surf->w + parse.ppt_gap_;
+	parse.ppt_max_line_height_ = surf->w;
+}
+
+QrParse::tppt_lock::~tppt_lock()
+{
+	VALIDATE(parse_.ppt_ && parse_.ppt_bg_.get() != nullptr, null_str);
+
+	imwrite(parse_.ppt_bg_, "qr_ppt.png");
+
+	parse_.ppt_step_ = 0;
+	parse_.ppt_next_step_offset_.x = 0;
+	parse_.ppt_next_step_offset_.y = 0;
+	parse_.ppt_max_line_height_ = 0;
+	parse_.ppt_bg_ = nullptr;
+}
+
+void QrParse::insert_ppt(const surface& surf, const std::string& name, bool step)
+{
+	VALIDATE(ppt_ && surf.get() != nullptr, null_str);
+	VALIDATE(surf.get() != nullptr && !name.empty(), null_str);
+	
+	const int vgap = ppt_gap_ / 2;
+
+	if (ppt_next_step_offset_.x + surf->w > ppt_bg_->w) {
+		ppt_next_step_offset_.x = 0;
+		ppt_next_step_offset_.y += ppt_name_line_height_ + ppt_max_line_height_ + vgap;
+		ppt_max_line_height_ = 0;
+	}
+
+	std::stringstream name_ss;
+	if (step) {
+		name_ss << ppt_step_ << " ";
+	}
+	name_ss << name;
+	surface text_surf = font::get_rendered_text(name_ss.str(), 0, ppt_name_font_size_, font::BLACK_COLOR);
+	SDL_Rect dst_rect {(surf->w - text_surf->w) / 2, (ppt_name_line_height_ - text_surf->h) / 2, text_surf->w, text_surf->h};
+	dst_rect.x += ppt_next_step_offset_.x;
+	dst_rect.y += ppt_next_step_offset_.y;
+	sdl_blit(text_surf, nullptr, ppt_bg_, &dst_rect);
+
+	dst_rect = ::create_rect(ppt_next_step_offset_.x, ppt_next_step_offset_.y + ppt_name_line_height_, surf->w, surf->h);
+	sdl_blit(surf, nullptr, ppt_bg_, &dst_rect);
+
+	ppt_next_step_offset_.x += surf->w + ppt_gap_;
+	if (surf->h > ppt_max_line_height_) {
+		ppt_max_line_height_ = surf->h;
+	}
+
+	if (step) {
+		ppt_step_ ++;
+	}
+}
+
+cv::Mat QrParse::FindQrPoint(const cv::Mat& bgr)
+{
+	std::unique_ptr<tppt_lock> ppt_lock;
+
+	cv::Mat result, tmp;
+	cv::Mat gray;
+
+	if (ppt_) {
+		cvtColor(bgr, tmp, cv::COLOR_BGR2BGRA);
+		ppt_lock.reset(new tppt_lock(*this, tmp));
+	}
+
+	uint32_t start_ticks = SDL_GetTicks();
+
+	cvtColor(bgr, gray, cv::COLOR_BGR2GRAY);		// Convert Image captured from Image Input to GrayScale	
+
+	if (ppt_) {
+		cvtColor(gray, tmp, cv::COLOR_GRAY2BGRA);
+		insert_ppt(tmp, _("qrcode^gray"), true);
+	}
+
+	cv::Mat edges, unbolden_edges;
+	cv::Canny(gray, edges, 100 , 200, 3);		// Apply Canny edge detection on the gray image
+
+	uint32_t canny_ticks = SDL_GetTicks();
+	// SDL_Log("canny_ticks: %u", canny_ticks - start_ticks);
+
+	if (ppt_) {
+		cvtColor(edges, tmp, cv::COLOR_GRAY2BGRA);
+		insert_ppt(tmp, _("qrcode^canny"), true);
+		unbolden_edges = edges.clone();
+	}
+
+	bolden_binary_gray(edges);
+
+	if (ppt_) {
+		cvtColor(edges, tmp, cv::COLOR_GRAY2BGRA);
+		insert_ppt(tmp, _("qrcode^bolden"), true);
+	}
+
+	uint32_t bolden_ticks = SDL_GetTicks();
+	// SDL_Log("bolden_ticks: %u", bolden_ticks - canny_ticks);
+
+	std::vector<std::vector<cv::Point> > contours;
+	std::vector<cv::Vec4i> hierarchy;
+	findContours(edges, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+	// findContours(edges, contours, hierarchy, CV_RETR_EXTERNAL, cv::CHAIN_APPROX_NONE, cv::Point(0, 0));
+	// findContours(edges, contours, hierarchy, CV_RETR_LIST, cv::CHAIN_APPROX_NONE, cv::Point(0, 0));
+
+	if (ppt_) {
+		cvtColor(bgr, tmp, cv::COLOR_BGR2BGRA);
+		overlay_contours(tmp, contours, hierarchy);
+		insert_ppt(tmp, _("qrcode^findContours"), true);
+
+		// unbolden overlayed image
+		std::vector<std::vector<cv::Point> > contours2;
+		std::vector<cv::Vec4i> hierarchy2;
+		findContours(unbolden_edges, contours2, hierarchy2, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+		cvtColor(bgr, tmp, cv::COLOR_BGR2BGRA);
+		overlay_contours(tmp, contours2, hierarchy2);
+		insert_ppt(tmp, _("qrcode^unbolden"), false);
+	}
+
+	uint32_t contours_ticks = SDL_GetTicks();
+	// SDL_Log("contours_ticks: %u", contours_ticks - bolden_ticks);
+
+	const int min_childs = 1;
+	int child_at, childs;
+	int min_size = SDL_min(gray.rows, gray.cols);
+	int max_mark_size = min_size / 4; // at least 4 mark's size per "line"
+
+	std::vector<QrParse::tmark> marks;
+	tmark tmp_mark;
+	int contour_size = contours.size();
+	for (int i = 0; i < contour_size; i++) {
+		// if it is mark, it has at least min_childs childs.
+		child_at = i;
+		childs = 0;
+		for (childs = 0; childs < min_childs; childs ++) {
+			child_at = hierarchy[child_at][2];
+			if (child_at == -1) {
+				break;
+			}
+		}
+		if (childs != min_childs) {
+			continue;
+		}
+
+		tmp_mark.contour_at = i;
+		bool isQr = QrParse::IsQrMark(contours[i], gray, i, max_mark_size, marks, tmp_mark);
+		if (isQr) {
+			marks.push_back(QrParse::tmark(tmp_mark));
+		}
+	}
+
+	uint32_t locate_ticks = SDL_GetTicks();
+	// SDL_Log("locate_ticks: %u", locate_ticks - contours_ticks);
+
+	if (marks.size() != 3) {
+		return result;
+	}
+	std::vector<tmark> markSrc = marks;
+	std::vector<tmark> markDest = markSrc;
+
+	AdjustQrPoint(markSrc, markDest);
+
+
+	// pt0----pt1
+	// 
+	// pt2
+	// cv::Mat& src = gray;
+
+	bool clockwise;
+	// 二维码倾斜角度
+	SDL_Point hor{markDest[0].center.x + 300, markDest[0].center.y}; //水平线
+	// in https://www.cnblogs.com/yuanchenhui/p/opencv_qr.html, #3 param of QrParse::Angle is start O,
+	// for calculate_line_angle, #2 param is start O.
+	double qrAngle = calculate_line_angle(true, markDest[0].center, markDest[1].center, hor, clockwise);
+
+	SDL_Rect qrcode_rect = min_enclosed_rect(markDest[0].rect, markDest[1].rect, markDest[2].rect);
+	qrcode_rect = enlarge_rect(qrcode_rect, qrcode_rect.w / 2, qrcode_rect.w / 2, qrcode_rect.h / 2, qrcode_rect.h / 2, gray.cols, gray.rows);
+	if (ppt_) {
+		cvtColor(gray, tmp, cv::COLOR_GRAY2BGRA);
+		SDL_Rect rect = min_enclosed_rect(markDest[0].rect, markDest[1].rect, markDest[2].rect);
+		cv::rectangle(tmp, cv::Rect(rect.x, rect.y, rect.w, rect.h), cv::Scalar(0, 0, 255, 255), 1);
+
+		tmp = tmp(cv::Rect(qrcode_rect.x, qrcode_rect.y, qrcode_rect.w, qrcode_rect.h)).clone();
+		insert_ppt(tmp, _("qrcode^crop"), true);
+	}
+
+	if (qrAngle > 0.5) {
+		double rotationAngle = clockwise? -qrAngle: qrAngle;
+		cv::Mat drawingRotation = rotate_mat(gray(cv::Rect(qrcode_rect.x, qrcode_rect.y, qrcode_rect.w, qrcode_rect.h)), rotationAngle);
+		if (ppt_) {
+			cvtColor(drawingRotation, tmp, cv::COLOR_GRAY2BGRA);
+			insert_ppt(tmp, _("qrcode^rotate"), true);
+		}
+
+		// After cv::warpAffine area that before "empty" will be fill "black", 
+		// below "cut" destroys the contour that "black" self-linked.
+		gray = drawingRotation(cv::Rect(8, 8, drawingRotation.cols - 16, drawingRotation.rows - 16));
+
+	} else {
+		cv::Mat tmp = gray(cv::Rect(qrcode_rect.x, qrcode_rect.y, qrcode_rect.w, qrcode_rect.h)).clone();
+		gray = tmp;
+	}
+
+	//
+	// second find in sub-bgr
+	//
+
+	// 二值化
+	cv::Canny(gray, edges, 100 , 200, 3);		// Apply Canny edge detection on the gray image
+	if (ppt_) {
+		cvtColor(edges, tmp, cv::COLOR_GRAY2BGRA);
+		insert_ppt(tmp, _("qrcode^canny"), true);
+	}
+
+	bolden_binary_gray(edges);
+	if (ppt_) {
+		cvtColor(edges, tmp, cv::COLOR_GRAY2BGRA);
+		insert_ppt(tmp, _("qrcode^bolden"), true);
+	}
+
+	// 调用查找轮廓函数
+	contours.clear();
+	hierarchy.clear();
+	findContours(edges, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+	if (ppt_) {
+		cvtColor(edges, tmp, cv::COLOR_GRAY2BGRA);
+		overlay_contours(tmp, contours, hierarchy);
+		insert_ppt(tmp, _("qrcode^findContours"), true);
+	}
+
+	min_size = SDL_min(gray.rows, gray.cols);
+	max_mark_size = min_size / 4; // at least 4 mark's size per "line"
+
+	marks.clear();
+	contour_size = contours.size();
+	for (int i = 0; i < contour_size; i++) {
+		// if it is mark, it has at least min_childs childs.
+		child_at = i;
+		childs = 0;
+		for (childs = 0; childs < min_childs; childs ++) {
+			child_at = hierarchy[child_at][2];
+			if (child_at == -1) {
+				break;
+			}
+		}
+		if (childs != min_childs) {
+			continue;
+		}
+
+		tmp_mark.contour_at = i;
+		bool isQr = QrParse::IsQrMark(contours[i], gray, i, max_mark_size, marks, tmp_mark);
+		if (isQr) {
+			marks.push_back(QrParse::tmark(tmp_mark));
+		}
+	}
+
+	if (marks.size() != 3) {
+		return result;
+	}
+
+	markSrc = marks;
+	markDest = markSrc;
+	AdjustQrPoint(markSrc, markDest);
+
+	qrcode_rect = min_enclosed_rect(markDest[0].rect, markDest[1].rect, markDest[2].rect);
+	qrcode_rect = enlarge_rect(qrcode_rect, 10, 10, 10, 10, gray.cols, gray.rows);
+	// cv::copyMakeBorder(crop, qr, 10, 10, 10, 10, BORDER_CONSTANT, Scalar(255,255,255) );
+
+	// pt0----pt1
+	// 
+	// pt2
+	result = gray(cv::Rect(qrcode_rect.x, qrcode_rect.y, qrcode_rect.w, qrcode_rect.h)).clone();
+	if (ppt_) {
+		cvtColor(gray, tmp, cv::COLOR_GRAY2BGRA);
+		SDL_Rect rect = min_enclosed_rect(markDest[0].rect, markDest[1].rect, markDest[2].rect);
+		cv::rectangle(tmp, cv::Rect(rect.x, rect.y, rect.w, rect.h), cv::Scalar(0, 0, 255, 255), 1);
+
+		tmp = tmp(cv::Rect(qrcode_rect.x, qrcode_rect.y, qrcode_rect.w, qrcode_rect.h)).clone();
+		insert_ppt(tmp, _("qrcode^crop"), true);
+	}
+
+	return result;
+}
+
+int QrParse::FindQrPoint2(const cv::Mat& bgr, std::vector<std::vector<cv::Point> >& qrPoint)
+{
+	// 彩色图转灰度图
+    cv::Mat gray;
+	cvtColor(bgr, gray, cv::COLOR_BGR2GRAY);		// Convert Image captured from Image Input to GrayScale	
+
+    // 二值化
+    cv::Mat edges = gray;
+    // cv::threshold(gray, edges, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+	// cv::Canny(gray, edges, 100 , 200, 3);		// Apply Canny edge detection on the gray image
+
+	const int image_area = gray.rows * gray.cols;
+	// const int delta = 1; // easypr using
+	const int delta = 4; // 1823, 1044
+	const int min_area = 1024;
+	const int min_size = SDL_min(gray.rows, gray.cols);
+	const int max_area = min_size * min_size / 16; // at least 4 mark's size per "line"
+	const double max_area_ratio = 0.05;
+
+	std::vector<std::vector<cv::Point> > inv_msers, msers;
+    std::vector<cv::Rect> inv_bboxes, bboxes;
+
+	cv::Ptr<cv::MSER> mser = cv::MSER::create(delta, min_area, max_area, 0.25);
+	mser->detectRegions(edges, msers, bboxes);
+
+/*
+	tbboxes bboxes3;
+	for (std::vector<cv::Rect>::const_iterator it = bboxes.begin(); it != bboxes.end(); ++ it) {
+		const cv::Rect& rect = *it;
+		if (rect.width < min_bbox_width) {
+			continue;
+		}
+		if (rect.height < min_bbox_height) {
+			continue;
+		}
+
+		bboxes3.insert(rect);
+	}
+*/
+
+	std::vector<cv::Scalar> line_colors;
+	line_colors.push_back(cv::Scalar(0, 0, 255));
+	line_colors.push_back(cv::Scalar(0, 255, 0));
+	line_colors.push_back(cv::Scalar(255, 0, 0));
+	line_colors.push_back(cv::Scalar(0, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 0, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 0));
+
+	line_colors.push_back(cv::Scalar(128, 128, 255));
+	line_colors.push_back(cv::Scalar(128, 255, 128));
+	line_colors.push_back(cv::Scalar(255, 128, 128));
+	line_colors.push_back(cv::Scalar(128, 255, 255));
+	line_colors.push_back(cv::Scalar(255, 128, 255));
+	line_colors.push_back(cv::Scalar(255, 255, 128));
+	int color_at = 0;
+
+	// mser and conside png
+	cv::Mat mser_mat = bgr.clone();
+	for (std::vector<cv::Rect>::const_iterator it = bboxes.begin(); it != bboxes.end(); ++ it) {
+		const cv::Rect& rect = *it;
+		cv::rectangle(mser_mat, rect, line_colors[color_at]);
+		color_at ++;
+		if (color_at == line_colors.size()) {
+			color_at = 0;
+		}
+	}
+
+
+	VALIDATE(edges.channels() == 1, null_str);
+	cv::Mat out;
+	cv::cvtColor(gray, out, cv::COLOR_GRAY2BGRA);
+
+	imwrite(mser_mat, "qr-o-verbose-image.png");
+	imwrite(out, "qr-o-verbose-edges.png");
+
+	return 0;
+}
+
+bool QrParse::IsQrMark(const std::vector<cv::Point>& contour, const cv::Mat& gray, int at, int max_mark_size, const std::vector<QrParse::tmark>& existed_marks, tmark& mark) const
+{
+	// if use CHAIN_APPROX_SIMPLE, it is rect's 4 point. so don't judge circumference.
+	// if (contour.size() < 96) { // it is circumference, not area.
+	//	return false;
+	// }
+
+	cv::RotatedRect rotatedRect = cv::minAreaRect(contour);
+	if (rotatedRect.size.width < 32 || rotatedRect.size.height < 32) {
+		return false;
+	}
+	if (rotatedRect.size.width > max_mark_size || rotatedRect.size.height > max_mark_size) {
+		return false;
+	}
+
+	double rate = 1.0 * rotatedRect.size.width / rotatedRect.size.height;
+	if (rate < 0.90 || rate > 1.1) {
+		return false;
+	}
+
+	const cv::Rect rect = rotatedRect.boundingRect();
+	if (rect.x < 0 || rect.y < 0 || rect.x + rect.width > gray.cols || rect.y + rect.height > gray.rows) {
+		return false;
+	}
+
+	const SDL_Rect sdl_rect{rect.x, rect.y, rect.width, rect.height};
+	for (std::vector<QrParse::tmark>::const_iterator it = existed_marks.begin(); it != existed_marks.end(); ++ it) {
+		const SDL_Rect& that = it->rect;
+		if (SDL_HasIntersection(&that, &sdl_rect)) {
+			return false;
+		}
+	}
+
+	// 将定位点从整个图上抠出来
+	cv::Mat crop = gray(rect).clone();
+	cv::Mat threshold_crop;
+	threshold(crop, threshold_crop, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+/*
+	{
+		cv::Mat out;
+		cv::cvtColor(crop, out, cv::COLOR_GRAY2BGR);
+	
+		std::stringstream ss;
+		ss << "saves/qr-o-verbose-crop" << at << ".png";
+		imwrite(out, ss.str());
+	}
+*/
+
+	// 横向黑白比例 1:1:3:1:1
+	int xcenter = IsQrColorRateAxis(threshold_crop, at, true);
+	int ycenter = xcenter != nposm? IsQrColorRateAxis(threshold_crop, at, false): nposm;
+	if (xcenter != nposm && ycenter != nposm) {
+		mark.center.x = rect.x + xcenter;
+		mark.center.y = rect.y + ycenter;
+		mark.rect = SDL_Rect{rect.x, rect.y, rect.width, rect.height};
+	}
+	return xcenter != nposm && ycenter != nposm;
+}
+
+// 横向黑白比例判断, 1: 1: 3: 1: 1
+int QrParse::IsQrColorRateAxis(const cv::Mat& binary_src, int at, bool x_axis) const
+{
+	VALIDATE(binary_src.channels() == 1, null_str);
+
+	std::vector<int> vValueCount;
+	std::vector<uchar> vColor;
+	int count = 0;
+	uchar lastColor = 0;
+
+	std::vector<cv::Point> points;
+
+	if (x_axis) {
+		// horizontal
+		int mid = binary_src.rows / 2;
+
+		const uchar* data = binary_src.ptr<uchar>(mid);
+		for (int i = 0; i < binary_src.cols; i++) {
+			points.push_back(cv::Point(i, mid));
+
+			vColor.push_back(data[i]);
+			uchar color = data[i];
+			if (color > 0 && color != 255) {
+				int ii = 0;
+			}
+
+			if (i == 0) {
+				lastColor = color;
+				count ++;
+			} else {
+				if (lastColor != color) {
+					vValueCount.push_back(count);
+					count = 0;
+				}
+				count ++;
+				lastColor = color;
+			}
+		}
+	} else {
+		// vertical
+		int mid = binary_src.cols / 2 * binary_src.channels();
+
+		for (int i = 0; i < binary_src.rows; i++) {
+			const uchar* data = binary_src.ptr<uchar>(i);
+			points.push_back(cv::Point(mid, i));
+
+			vColor.push_back(data[mid]);
+			uchar color = data[mid];
+			if (color > 0 && color != 255) {
+				int ii = 0;
+			}
+
+			if (i == 0) {
+				lastColor = color;
+				count ++;
+			} else {
+				if (lastColor != color) {
+					vValueCount.push_back(count);
+					count = 0;
+				}
+				count ++;
+				lastColor = color;
+			}
+		}
+	}
+
+	if (count != 0) {
+		vValueCount.push_back(count);
+	}
+
+	if (vValueCount.size() < 5) {
+		return nposm;
+	}
+
+	// 横向黑白比例1:1:3:1:1
+	int index = -1;
+	int maxCount = -1;
+	for (int i = 0; i < (int)vValueCount.size(); i++) {
+		if (i == 0) {
+			index = i;
+			maxCount = vValueCount[i];
+		} else {
+			if (vValueCount[i] > maxCount) {
+				index = i;
+				maxCount = vValueCount[i];
+			}
+		}
+	}
+
+	// 左边 右边 都有两个值，才行
+	if (index < 2) {
+		return nposm;
+	}
+	if ((vValueCount.size() - index) < 3) {
+		return nposm;
+	}
+
+	// 黑白比例1:1:3:1:1
+	float rate2 = ((float)maxCount) / 3.00;
+
+	float rate1 = vValueCount[index - 2] / rate2;
+	if (!IsQrRate(rate1)) {
+		return nposm;
+	}
+
+	float rate0 = vValueCount[index - 1] / rate2;
+	if (!IsQrRate(rate0)) {
+		return nposm;
+	}
+
+	float rate3 = vValueCount[index + 1] / rate2;
+	if (!IsQrRate(rate3)) {
+		return nposm;
+	}
+
+	float rate4 = vValueCount[index + 2] / rate2;
+	if (!IsQrRate(rate4)) {
+		return nposm;
+	}
+/*
+	{
+		cv::Mat out = binary_src.clone();
+		cv::cvtColor(binary_src, out, cv::COLOR_GRAY2BGR);
+		
+		for (std::vector<cv::Point>::const_iterator it = points.begin(); it != points.end(); ++ it) {
+			const cv::Point& pt = *it;
+			cv::circle(out, pt, 0, cv::Scalar(0, 0, 255), -1);
+		}
+
+		std::stringstream ss;
+		ss << "saves/qr-o-verbose-crop-" << (x_axis? "x-": "y-") << at << ".png";
+		imwrite(out, ss.str());
+	}
+*/
+	int result = 0;
+	for (int i = 0; i < index; i++) {
+		result += vValueCount[i];
+	}
+	result += maxCount / 2;
+
+	return result;
+}
+
+bool QrParse::IsQrRate(float rate) const
+{
+     // 大概比例 不能太严格
+    return rate > 0.6 && rate < 1.9;
+}
+
+// pointDest存放调整后的三个点，三个点的顺序如下
+// pt0----pt1
+// 
+// pt2
+bool QrParse::AdjustQrPoint(const std::vector<tmark>& pointSrc, std::vector<tmark>& pointDest)
+{
+	bool clockwise;
+	int index1[3] = { 2,1,0 };
+	int index2[3] = { 0,2,1 };
+	int index3[3] = { 0,1,2 };
+
+	for (int i = 0; i < 3; i++) {
+		int *n = index1;
+		if (i==0) {
+			n = index1;
+		} else if (i == 1) {
+			n = index2;
+		} else {
+			n = index3;
+		}
+
+		// double angle = calculate_line_angle(true, pointSrc[n[0]], pointSrc[n[1]], pointSrc[n[2]], clockwise);
+		double angle = calculate_line_angle(true, pointSrc[n[2]].center, pointSrc[n[0]].center, pointSrc[n[1]].center, clockwise);
+		if (angle > 80 && angle < 99) {
+			pointDest[0] = pointSrc[n[2]];
+			if (clockwise) {
+				pointDest[1] = pointSrc[n[0]];
+				pointDest[2] = pointSrc[n[1]];
+			} else {
+				pointDest[1] = pointSrc[n[1]];
+				pointDest[2] = pointSrc[n[0]];
+			}
+			return true;
+		}
+	}
+	return true;
+}
+
+SDL_Rect QrParse::min_enclosed_rect(const SDL_Rect& rect0, const SDL_Rect& rect1, const SDL_Rect& rect2) const
+{
+	int min_x = SDL_min(rect0.x, rect1.x);
+	min_x = SDL_min(min_x, rect2.x);
+	int max_x = SDL_max(rect0.x + rect0.w, rect1.x + rect1.w);
+	max_x = SDL_max(max_x, rect2.x + rect2.w);
+
+	int min_y = SDL_min(rect0.y, rect1.y);
+	min_y = SDL_min(min_y, rect2.y);
+	int max_y = SDL_max(rect0.y + rect0.h, rect1.y + rect1.h);
+	max_y = SDL_max(max_y, rect2.y + rect2.h);
+
+	return SDL_Rect{min_x, min_y, max_x - min_x, max_y - min_y};
+}
+
+static QrParse qr_parse;
+
+// using namespace zxing;
+// using namespace zxing::qrcode;
+
+using namespace ZXing;
+
+static int decode_qr_std_exceptions = 0;
+static int decode_qr_unknown_exceptions = 0;
+
+std::string decode_qr(cv::Mat& grey)
+{
+/*
+	int width, height, channels;
+	std::unique_ptr<stbi_uc, void(*)(void*)> buffer(stbi_load(filePath.c_str(), &width, &height, &channels, 4), stbi_image_free);
+*/
+	bool fastMode = true;
+	bool tryRotate = false;
+	std::string singleFormat, filePath;
+	std::string res;
+
+	// Official example does not see handling exception code, but exception throwed when actually used.
+	try {
+		auto result = ReadBarcode(grey.cols, grey.rows, grey.data, grey.cols, 
+			{BarcodeFormatFromString(singleFormat)}, tryRotate, !fastMode);
+
+		if (result.isValid()) {
+/*
+			std::cout << "Text:     " << TextUtfEncoding::ToUtf8(result.text()) << "\n"
+					  << "Format:   " << ToString(result.format()) << "\n"
+					  << "Position: " << result.resultPoints() << "\n";
+			auto errLevel = result.metadata().getString(ResultMetadata::Key::ERROR_CORRECTION_LEVEL);
+			if (!errLevel.empty()) {
+				std::cout << "EC Level: " << TextUtfEncoding::ToUtf8(errLevel) << "\n";
+			}
+*/
+			res = TextUtfEncoding::ToUtf8(result.text());
+		}
+
+	} catch (const std::exception& e) {
+		SDL_Log("decode_qr: %s", e.what());
+		decode_qr_std_exceptions ++;
+
+	} catch (...) {
+		SDL_Log("decode_qr: unknown exception");
+		decode_qr_unknown_exceptions ++;
+	}
+
+    return res;
+}
+
+std::string find_qr(const cv::Mat& image)
+{
+
+	uint32_t start_ticks = SDL_GetTicks();
+	VALIDATE(!image.empty(), null_str);
+
+	std::string result;
+	std::stringstream ss;
+
+	if (preferences::developer()) {
+		cv::Mat gray = qr_parse.FindQrPoint(image);
+		if (!gray.empty()) {
+			result = decode_qr(gray);
+		}
+
+		uint32_t stop_ticks = SDL_GetTicks();
+		ss << image.cols << "x" << image.rows << ": find_qr, used: " << (stop_ticks - start_ticks);
+		if (!gray.empty()) {
+			ss << ", cropped: (" << gray.cols << "x" << gray.rows << "), result: " << (result.empty()? "null": result);
+		} else {
+			ss << ", locate qrcode rectangle fail";
+		}
+
+	} else {
+		cv::Mat gray;
+		cvtColor(image, gray, cv::COLOR_BGR2GRAY);
+		result = decode_qr(gray);
+
+		uint32_t stop_ticks = SDL_GetTicks();
+
+		static int frames = 0;
+		static uint32_t total = 0;
+		frames ++;
+		total += stop_ticks - start_ticks;
+
+		ss << image.cols << "x" << image.rows << ": find_qr, used: " << (stop_ticks - start_ticks);
+		ss << "(avg: " << (total / frames) << ")";
+		if (!gray.empty()) {
+			ss << ", cropped: (" << gray.cols << "x" << gray.rows << "), result: " << (result.empty()? "null": result);
+		} else {
+			ss << ", locate qrcode rectangle fail";
+		}
+	}
+	SDL_Log("%s, excetpions(%i, %i)", ss.str().c_str(), decode_qr_std_exceptions, decode_qr_unknown_exceptions);
+
+	return result;
+}
+
+surface generate_qr(const std::string& text, int width, int height)
+{
+	VALIDATE(!text.empty() && width >= 100 && height >= 100, null_str);
+
+	surface result;
+	int margin = 10;
+	int eccLevel = 2; // -1
+	std::string format = "QR_CODE";
+
+	try {
+		auto barcodeFormat = BarcodeFormatFromString(format);
+		VALIDATE(barcodeFormat != BarcodeFormat::FORMAT_COUNT, null_str);
+
+		MultiFormatWriter writer(barcodeFormat);
+		if (margin >= 0) {
+			writer.setMargin(margin);
+		}
+		if (eccLevel >= 0) {
+			writer.setEccLevel(eccLevel);
+		}
+
+		auto bitmap = writer.encode(TextUtfEncoding::FromUtf8(text), width, height).toByteMatrix();
+		if (bitmap.width() == width && bitmap.height() == height) {
+			cv::Mat gray(bitmap.height(), bitmap.width(), CV_8UC1, (uint8_t*)bitmap.data());
+			cv::Mat tmp;
+			cvtColor(gray, tmp, cv::COLOR_GRAY2BGRA);
+			result = clone_surface(tmp);
+		}
+
+	} catch (const std::exception& e) {
+		SDL_Log("generate_qr: %s", e.what());
+	}
+
+	return result;
+}

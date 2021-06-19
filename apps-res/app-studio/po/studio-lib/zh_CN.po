@@ -1,0 +1,1969 @@
+# This file is distributed under the same license as the Battle for Wesnoth package.
+# Automatically generated, 2005.
+# Dionysus <huang.wei.bhu@gmail.com>, 2007.  (unicon)
+# sylecn <sylecn@yahoo.com.cn>, 2009.
+# CloudiDust <cloudidust@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: studio-lib\n"
+"Report-Msgid-Bugs-To: http://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2021-06-15 14:28+0800\n"
+"PO-Revision-Date: 2021-06-15 14:29+0800\n"
+"Last-Translator: \n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Bookmarks: -1,-1,-1,3,-1,-1,-1,-1,-1,-1\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/_bonus.cpp:1
+msgid "studio"
+msgstr "Rose Studio"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:1
+msgid "(bin)Checksum"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:3
+msgid "(wml)Checksum"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:5
+msgid "ASCII"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:7
+msgid "Absent"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:9
+msgid "Append"
+msgstr "添加"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:11
+msgid "Automatic placement"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:13
+msgid "Belonging to app"
+msgstr "归属到的app"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:15
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1095
+msgid "Best height"
+msgstr "标称高度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:17
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1095
+msgid "Best width"
+msgstr "标称宽度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:19
+msgid "Ble peripheral"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:21
+msgid "Bootup"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:23
+msgid "Border"
+msgstr "边界"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:25
+msgid "Build"
+msgstr "构造"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:27
+msgid "Cancel"
+msgstr "取消"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:29
+msgid "Change type"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:31
+msgid "Chinese"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:33
+msgid "Click dismiss"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:35
+#: apps-src/apps/studio/gui/dialogs/new_theme.cpp:469
+msgid "Close"
+msgstr "关闭"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:37
+msgid "Default color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:39
+msgid "Default textdomain"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:41
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1920
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1949
+msgid "Delete"
+msgstr "删除"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:43
+msgid "Desensitize"
+msgstr "脱敏"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:45
+msgid "Disable color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:47
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1893
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1918
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1948
+msgid "Edit"
+msgstr "编辑"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:49
+msgid "Enable auto-h-flip (Both image and halo)"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:51
+msgid "Enable auto-v-flip (Both image and halo)"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:53
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:91
+msgid "Erase"
+msgstr "删除"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:55
+msgid "Erase animation"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:57
+msgid "Execute"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:59
+msgid "File in res"
+msgstr "资源包中文件"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:61
+msgid "File in src"
+msgstr "源码包中文件"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:63
+msgid "File name"
+msgstr "文件名"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:65
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:823
+msgid "Fixed clos"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:67
+msgid "Fixed height"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:69
+msgid "Fixed width"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:71
+msgid "Focus color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:73
+msgid "Foldable"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:75
+msgid "Font size"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:77
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:852
+msgid "Gap"
+msgstr "间隔"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:79
+msgid "Generate"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:81
+msgid "Height"
+msgstr "高度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:83
+msgid "Hide"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:85
+msgid "Horizontal align"
+msgstr "水平对齐"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:87
+msgid "Horizontal mode"
+msgstr "水平滚动条模式"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:89
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1125
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1205
+msgid "ID"
+msgstr "标识"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:91
+msgid "Initial state"
+msgstr "初始时状态"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:93
+msgid "Insert animation"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:95
+msgid "Inverse color template"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:97
+msgid "Item focus color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:99
+msgid "Item highlight color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:101
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:90
+msgid "Linked group"
+msgstr "等尺寸组"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:103
+msgid "Linked_group setting"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:105
+msgid "Margin"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:107
+msgid "Menu focus color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:109
+msgid "Mode"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:111
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:170
+msgid "Modify"
+msgstr "修改"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:113
+msgid "Multi select"
+msgstr "可以多选"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:115
+msgid "NO."
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:117
+msgid "Normal color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:119
+msgid "Normal color template"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:121
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2063
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1766
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1125
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1205
+msgid "OK"
+msgstr "确定"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:123
+msgid "Other color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:125
+msgid "Param"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:127
+msgid "Particular"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:129
+msgid "Pixel"
+msgstr "像素"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:131
+msgid "Placeholder color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:133
+msgid "Reference widget's id"
+msgstr "参考控件的id"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:135
+msgid "Refresh"
+msgstr "刷新"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:137
+msgid "Regard markup as atom"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:139
+msgid "Report's id"
+msgstr "报表的id"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:141
+#: apps-src/apps/studio/mkwin_controller.cpp:1284
+#: apps-src/apps/studio/mkwin_controller.cpp:1542
+msgid "Save"
+msgstr "保存"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:143
+msgid "Segment switch"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:145
+msgid "Shape of map tile "
+msgstr "栅格形状"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:147
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:116
+msgid "Start time"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:149
+msgid "Submenu"
+msgstr "子菜单"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:151
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:233
+msgid "Terrain filename(Exclude '.png')"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:153
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1675
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:119
+#: apps-src/apps/studio/mkwin_controller.cpp:1608
+#: apps-src/apps/studio/mkwin_controller.cpp:2638
+msgid "Theme"
+msgstr "主题"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:155
+msgid "Title color template"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:157
+#: apps-src/apps/studio/gui/dialogs/home.cpp:131
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1717
+msgid "Tools"
+msgstr "工具"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:159
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:209
+msgid "Transition filename prefix(Include '-' if necessary)"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:161
+msgid "Unit height"
+msgstr "单元高度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:163
+msgid "Unit width"
+msgstr "单元宽度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:165
+msgid "Vertical align"
+msgstr "垂直对齐"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:167
+msgid "Vertical mode"
+msgstr "垂直滚动条模式"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:169
+msgid "WIfi"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:171
+msgid "Width"
+msgstr "宽度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:173
+msgid "app"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:175
+msgid "calculating Maximum Text Width Using Same Column control(MTWUSC)"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:177
+msgid "cnftl path"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:179
+msgid "definition"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:181
+msgid "frame^Alpha"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:183
+msgid "frame^Duration"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:185
+msgid "frame^Font size"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:187
+msgid "frame^Halo"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:189
+msgid "frame^Image"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:191
+msgid "frame^Image diagonal"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:193
+msgid "frame^Image horizontal"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:195
+msgid "frame^Image mod"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:197
+msgid "frame^Offset x"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:199
+msgid "frame^Offset y"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:201
+msgid "frame^Sound"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:203
+msgid "frame^Static text"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:205
+msgid "frame^Text color"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:207
+msgid "frame^Use image"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:209
+msgid "frame^x"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:211
+msgid "frame^y"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:213
+msgid "grow_factor"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:215
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1110
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1518
+msgid "height"
+msgstr "高度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:217
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:60
+msgid "id"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:219
+msgid "indention_step_size"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:221
+msgid "label"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:223
+msgid "misc/back.png"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:225
+msgid "node's id"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:227
+msgid "rect"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:229
+msgid "tooltip"
+msgstr ""
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:231
+msgid "widget^definition"
+msgstr "风格"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:233
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1110
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1518
+msgid "width"
+msgstr "宽度"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:235
+msgid "x"
+msgstr "x"
+
+#: apps-res/app-studio/po/cfg-cpp/studio-lib/gui.cpp:237
+msgid "y"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:96
+msgid "frame^Count"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:98
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1299
+msgid "None"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:374
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1355
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1411
+msgid "Master particular"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:444
+msgid "anim^defend"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:449
+msgid "anim^resistance"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:452
+msgid "anim^leading"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:455
+msgid "anim^healing"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:461
+msgid "anim^idle"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:468
+msgid "anim^multi_idle"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:475
+msgid "anim^healed"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:481
+msgid "anim^movement"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:486
+msgid "anim^build"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:492
+msgid "anim^repair"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:498
+msgid "anim^die"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:503
+msgid "anim^multi_die"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:508
+msgid "anim^melee_attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:518
+msgid "anim^ranged_attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:531
+msgid "anim^magic_missile_attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:539
+msgid "anim^lightbeam_attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:547
+msgid "anim^fireball_attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:555
+msgid "anim^iceball_attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:563
+msgid "anim^lightning_attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:571
+msgid "anim^card"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:572
+msgid "anim^reinforce"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:573
+msgid "anim^individuality"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:574
+msgid "anim^tactic"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:575
+msgid "anim^blade"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:576
+msgid "anim^fire"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:577
+msgid "anim^magic"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:578
+msgid "anim^heal"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:579
+msgid "anim^destruct"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:580
+msgid "anim^formation attack"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:581
+msgid "anim^formation defend"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:582
+msgid "anim^pass scenario"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:583
+msgid "anim^perfect"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:584
+msgid "anim^income"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:585
+msgid "anim^stratagem_up"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:586
+msgid "anim^stratagem_down"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:587
+msgid "anim^location"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:588
+msgid "anim^hscroll text"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:589
+msgid "anim^title_screen"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:590
+msgid "anim^load_scenario"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:592
+msgid "anim^flags"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:595
+msgid "anim^text"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:598
+msgid "anim^place"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1213
+msgid "Filter"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1348
+msgid "Area mode"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1348
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1782
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:836
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:838
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:840
+msgid "Yes"
+msgstr "是"
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1348
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1782
+msgid "No"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1364
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1431
+msgid "Second particular"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1608
+msgid "Animation editor"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1772
+msgid "Template"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1894
+msgid "Add particular"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1945
+msgid "In front of"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1946
+msgid "Behind"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:1947
+msgid "Add frame"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2034
+msgid "Do you want to erase this animation?"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2063
+msgid "Rename id"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2063
+msgid "Input new id"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2111
+msgid "Do you want to delete this particular?"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2113
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2148
+msgid "Confirm delete"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim.cpp:2146
+msgid "Do you want to delete frame on $particular?"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim_filter.cpp:25
+msgid "anim^Edit filter"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim_frame.cpp:28
+msgid "anim^Edit frame"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim_particular.cpp:25
+msgid "anim^Edit particular"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim_particular.cpp:63
+msgid "Invalid string"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim_particular.cpp:67
+msgid "Reserved string"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/anim_particular.cpp:80
+msgid "Other has holden it"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/capabilities.cpp:63
+msgid "New app"
+msgstr "新建app"
+
+#: apps-src/apps/studio/gui/dialogs/capabilities.cpp:65
+msgid "Edit app capabilities"
+msgstr "编辑app属性"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:57
+msgid "Invalid '$id' value!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:65
+msgid "Must not empty."
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:77
+msgid "Error $id expression!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:97
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:108
+msgid "Double edge align. Maybe stretch"
+msgstr "两端对齐。可能拉伸"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:99
+msgid "Align left"
+msgstr "左对齐。不放大"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:101
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:112
+msgid "Align center"
+msgstr "中央对齐。不放大"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:103
+msgid "Align right"
+msgstr "右对齐。不放大"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:110
+msgid "Align top"
+msgstr "上对齐。不放大"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:114
+msgid "Align bottom"
+msgstr "下对齐。不放大"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:119
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:126
+msgid "Always invisible"
+msgstr "一直不显示"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:121
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:128
+msgid "Auto visible"
+msgstr "自动显示"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:135
+msgid "Auto"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:136
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:39
+#: apps-src/apps/studio/mkwin_controller.cpp:1688
+msgid "Landscape"
+msgstr "横屏"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:137
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:41
+#: apps-src/apps/studio/mkwin_controller.cpp:1690
+msgid "Portrait"
+msgstr "竖屏"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:182
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:89
+msgid "Base"
+msgstr "基本"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:183
+msgid "Best size"
+msgstr "标称尺寸"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:184
+msgid "Advanced"
+msgstr "高级"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:470
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1451
+msgid "Toggle button"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:470
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1451
+msgid "Button"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:486
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:491
+msgid "Usable variable: screen_width, screen_height"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:692
+msgid "id error"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:763
+msgid "must be integer."
+msgstr "必须是整数值"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:769
+msgid "must be >= 0."
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:787
+msgid "Can not empty!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:798
+msgid "Maximum value must large than minimum value!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:804
+msgid "Step size must > 0!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:808
+msgid "Step size must < maximum_value - minimum_value!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:823
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:852
+msgid "must not be less than 0!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1093
+msgid "Max width"
+msgstr "最大宽度"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1093
+msgid "Max height"
+msgstr "最大高度"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1114
+msgid ""
+"The $field calculated according to the content at that time is the best "
+"$field."
+msgstr "根据当时内容算出的$field作为标称$field。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1119
+msgid ""
+"The $field calculated according to the content at that time is the best "
+"$field, but maximum should not exceed cfg_2_os_size($size)."
+msgstr ""
+"根据当时内容算出的$field作为标称$field，但最大不能超过cfg_2_os_size($size)。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1121
+msgid ""
+"The $field calculated according to the content at that time is the best "
+"$field, but maximum should not exceed ($size) * hdpi_scale."
+msgstr ""
+"根据当时内容算出的$field作为标称$field，但最大不能超过($size) * hdpi_scale。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1125
+msgid "Best $field is fixed to cfg_2_os_size($size)."
+msgstr "标称$field固定为cfg_2_os_size($size)。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1127
+msgid "Best $field is fixed to ($size) * hdpi_scale."
+msgstr "标称$field固定为($size) * hdpi_scale。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1145
+msgid "min_text_width"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1149
+msgid "$field is fixed to cfg_2_os_size(max(cfg->min_width, $size))."
+msgstr "$field等于cfg_2_os_size(max(cfg->min_width, $size))。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1151
+msgid ""
+"$field is fixed to max(cfg_2_os_size(cfg->min_width), ($size) * hdpi_scale)."
+msgstr "$field等于max(cfg_2_os_size(cfg->min_width), ($size) * hdpi_scale)。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1395
+msgid "Multi line"
+msgstr "多行报表"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1395
+msgid "Tabbar"
+msgstr "单行报表"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1528
+msgid ""
+"The report control's current $field is divided by $fixed_cols as the unit "
+"$field."
+msgstr "报表控件当前的$field除以$fixed_cols作为单元$field。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1531
+msgid "The best $field calculated by the item at that time is the unit $field."
+msgstr "根据单元当时算出的标称$field作为单元$field。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1535
+msgid "Unit $field is fixed to cfg_2_os_size($size)."
+msgstr "单元$field固定为cfg_2_os_size($size)。"
+
+#: apps-src/apps/studio/gui/dialogs/control_setting.cpp:1537
+msgid "Unit $field is fixed to ($size) * hdpi_scale."
+msgstr "单元$field固定为($size) * hdpi_scale。"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:103
+msgid "V"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:105
+msgid "Version"
+msgstr "版本"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:128
+msgid "Window"
+msgstr "窗口"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:129
+msgid "Animation"
+msgstr "动画"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:130
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1724
+msgid "OpenCV"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:132
+msgid "Language"
+msgstr "语言"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:133
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:88
+msgid "Settings"
+msgstr "设置"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:134
+msgid "Chat"
+msgstr "聊天"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:422
+#: apps-src/apps/studio/gui/dialogs/home.cpp:472
+#: apps-src/apps/studio/gui/dialogs/home.cpp:690
+#: apps-src/apps/studio/gui/dialogs/home.cpp:810
+#: apps-src/apps/studio/gui/dialogs/home.cpp:833
+#: apps-src/apps/studio/gui/dialogs/home.cpp:876
+#: apps-src/apps/studio/gui/dialogs/home.cpp:895
+#: apps-src/apps/studio/gui/dialogs/home.cpp:911
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2039
+msgid "Fail"
+msgstr "失败"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:423
+#: apps-src/apps/studio/gui/dialogs/home.cpp:473
+msgid "New $app, $result."
+msgstr "新建$app，$result。"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:521
+#: apps-src/apps/studio/gui/dialogs/home.cpp:557
+msgid "New dialog(id = $id) to $app fail!"
+msgstr "在$app新建对话框（id = $id）失败！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:619
+msgid "Must exist ic_launcher-192.png in images/assets"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:620
+msgid "Must exist Icon-167.png in images/assets"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:621
+msgid "Must exist Icon-1024.png(No alpha) in images/assets"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:622
+msgid "Must exist LaunchImage-1242x2208.png in images/assets"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:624
+msgid "Export fail!"
+msgstr "导出失败！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:642
+msgid "$file's size must be $width x $height?"
+msgstr "$files的尺寸必须是$width x $height"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:658
+msgid "Do you want to export $app package to $dst?"
+msgstr "您想导出$app包，把它放在$dst吗？"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:692
+msgid "Export $app package from \"$src\" to \"$dst\", $result!"
+msgstr "从$src导出$app包到$dst，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:810
+#: apps-src/apps/studio/gui/dialogs/home.cpp:833
+#: apps-src/apps/studio/gui/dialogs/home.cpp:876
+#: apps-src/apps/studio/gui/dialogs/home.cpp:895
+#: apps-src/apps/studio/gui/dialogs/home.cpp:911
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2039
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2227
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2255
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2276
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2288
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2299
+msgid "Success"
+msgstr "成功"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:811
+msgid "Export rsp. [1/2]Zip $aplt from \"$src\" to \"$dst\", $result!"
+msgstr "导出rsp包。[1/2]从$src压缩到$dst，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:834
+msgid "Export $aplt|'rsp from \"$src\" to \"$dst\", $result!"
+msgstr "从$src导出$aplt的rsp包到$dst，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:878
+msgid "Export $app|'s .ksa from \"$src\" to \"$dst\", $result!"
+msgstr "从$src导出$app .ksa包到$dst，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:897
+msgid "Copy $app|'s resource from \"$src\" to \"$dst\", $result!"
+msgstr "从$src复制$app的资源包到$dst，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:913
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2301
+msgid "Create iOS kit on \"$dst\", $result!"
+msgstr "在$dst创建iOS工作包，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:946
+msgid "Unknown Rose version in $res. Can not import."
+msgstr "不能确定$res中的Rose版本。不能导入。"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:949
+msgid "Work Kit's Rose version is less than in $res. Can not import."
+msgstr "正在使用的工作包中的Rose版本低于$res的。不能导入。"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1026
+msgid "Import $app from $res fail!"
+msgstr "从$res导入$app失败！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1029
+msgid "There is no importable app in $res!"
+msgstr "在$res没有可导入的app！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1647
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1658
+msgid "App"
+msgstr "App"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1648
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1659
+msgid "Applet"
+msgstr "小程序"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1650
+msgid "New"
+msgstr "新建"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1661
+msgid "Import"
+msgstr "导入"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1673
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1699
+msgid "New dialog"
+msgstr "新建对话框"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1674
+msgid "New scene"
+msgstr "新建场景"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1677
+msgid "Export app package"
+msgstr "导出app包"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1678
+msgid "Edit capabilities"
+msgstr "编辑属性"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1679
+msgid "Export kOS ksa"
+msgstr "导出kOS安装包"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1682
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1702
+msgid "Remove"
+msgstr "移除"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1700
+msgid "Export *.rsp"
+msgstr "导出小程序包(*.rsp)"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1716
+msgid "Create iOS kit"
+msgstr "创建iOS工作包"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1732
+msgid "Porject Header"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1765
+msgid "New applet"
+msgstr "新建小程序"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1785
+msgid "Choose resource directory of Work Kit or App Package"
+msgstr "选择要从它倒入的工作包或app包的资源包目录"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1798
+msgid "Do you want to import app from $src?"
+msgstr "您想从$src倒入app吗？"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1876
+msgid "Do you want to export $app|'s kOS install package to .ksa?"
+msgstr "您想导出$app的kOS安装包到*.ksa吗？"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1893
+msgid "Do you want to copy $app|'s resource to .apk?"
+msgstr "您想预复制$app的资源包到.apk吗？"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1910
+#: apps-src/apps/studio/gui/dialogs/home.cpp:1974
+msgid "Do you want to remove $app from work kit?"
+msgstr "您想从工作包移除$app吗？"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2012
+msgid "Do you want to create iOS kit on $dst?"
+msgstr "您想在$dst创建iOS工作包吗？"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2027
+msgid "Do you want to generate header files for $project?"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2041
+msgid "Generate header files for $project, $result!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2229
+msgid "Export App Package from \"$src\" to \"$dst successfully!"
+msgstr "成功从$src导出app包到$dst！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2244
+msgid "Import $apps from \"$src\" successfully."
+msgstr "成功从$src导入$apps。"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2257
+msgid "New $app, $result!"
+msgstr "新建$app，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2258
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2279
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2291
+msgid ""
+"If you are runing Visual Studio and opening apps.sln, please execute \"Close "
+"Solution\", then open again."
+msgstr ""
+"如果你正运行Visual Studio打开着apps.sln，请先“Close Solution”，然后重新打开。"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2278
+msgid "Remove $app, $result!"
+msgstr "移除$app，$result！"
+
+#: apps-src/apps/studio/gui/dialogs/home.cpp:2290
+msgid "New dialog(id = $id) to $app successfully."
+msgstr "在$app成功新建了对话框（id = $id）。"
+
+#: apps-src/apps/studio/gui/dialogs/linked_group.cpp:93
+msgid "$owner|'s Linked group"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/linked_group.cpp:175
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:895
+msgid "String is using."
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/linked_group.cpp:187
+msgid "Both width and height must not be all No!"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:79
+msgid "Status"
+msgstr "状态"
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:80
+msgid "Right Click"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:84
+#: apps-src/apps/studio/gui/dialogs/new_window.cpp:38
+msgid "scene"
+msgstr "场景"
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:84
+#: apps-src/apps/studio/gui/dialogs/new_window.cpp:38
+msgid "dialog"
+msgstr "对话框"
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:86
+msgid "Build gui.bin"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:87
+msgid "Verify scripts"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:89
+msgid "Special Setting"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:93
+msgid "Insert top"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:94
+msgid "Inert bottom"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:95
+msgid "Erase row"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:96
+msgid "Insert left"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:97
+msgid "Insert right"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:98
+msgid "Erase column"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:100
+msgid "Insert child"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:101
+msgid "Erase child"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:103
+msgid "Unpack"
+msgstr "拆散"
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:104
+msgid "Pack"
+msgstr "合成模板控件"
+
+#: apps-src/apps/studio/gui/dialogs/mkwin_scene.cpp:121
+#: apps-src/apps/studio/mkwin_controller.cpp:1608
+#: apps-src/apps/studio/mkwin_controller.cpp:2640
+msgid "Dialog"
+msgstr "对话框"
+
+#: apps-src/apps/studio/gui/dialogs/new_theme.cpp:55
+msgid "$app|'s theme"
+msgstr "$app的主题"
+
+#: apps-src/apps/studio/gui/dialogs/new_theme.cpp:353
+msgid "There is invalid value in current theme."
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/new_theme.cpp:402
+msgid "Do you really want to erase theme?"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/new_theme.cpp:462
+msgid "Do you really want to close?"
+msgstr "您真的想关闭吗？"
+
+#: apps-src/apps/studio/gui/dialogs/new_theme.cpp:466
+msgid "Changes in the themes since the last save will be lost."
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:36
+msgid "Create or modify template widget"
+msgstr "创建或修改模板控件"
+
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:49
+msgid "Specified template doesn't contain template widgets"
+msgstr "指定的模板没有其它模板控件"
+
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:51
+msgid "Specified template contains other template widgets:"
+msgstr "指定的模板含有其它模板控件："
+
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:111
+msgid "Use to single orientation or double orientation's landscape"
+msgstr "用于单朝向或双朝向时的横屏"
+
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:115
+msgid ""
+"Use to double orientation's portrait. (It requires the template widget must "
+"already exist landscape)"
+msgstr "用于双朝向时的竖屏（它要求该模板控件必须已存在模屏配置）"
+
+#: apps-src/apps/studio/gui/dialogs/new_tpl_widget.cpp:172
+#: apps-src/apps/studio/gui/dialogs/new_window.cpp:53
+msgid "Create"
+msgstr "创建"
+
+#: apps-src/apps/studio/gui/dialogs/new_window.cpp:41
+msgid "New $window to $app"
+msgstr "在$app新建$window"
+
+#: apps-src/apps/studio/gui/dialogs/new_window.cpp:229
+msgid "Don't create unit_map.cpp, unit_map.hpp, unit.cpp and unit.hpp."
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/opencv.cpp:37
+msgid "OpenCV tester"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/opencv.cpp:69
+msgid "Press left mouse and motion to draw rectangle."
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/opencv.cpp:147
+msgid "Local video"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:96
+msgid "Image"
+msgstr "图像"
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:97
+msgid "cnftl"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:124
+msgid "Work directory"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:130
+msgid "Input filename"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:211
+msgid "Stuff filename prefix(Include '-' if necessary)"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:213
+msgid "Cropped filename prefix. full filename: <prefix>-topleft.png"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:239
+msgid "OFFSET_SIDE_1, OFFSET_SIDE_2, MID_W, MID_H"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:270
+msgid "Invalid '$key' value, not accept empty"
+msgstr "无效“$key”值，不能是空"
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:279
+msgid "'$key' value must combine $min to $max characters"
+msgstr "“$key”必须由$min到$max个字符组成"
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:281
+msgid "'$key' value must be $min characters"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:532
+msgid "Choose a cnftl Directory"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:796
+msgid "Can not find input.png"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:807
+msgid "First edit box input"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/tools.cpp:812
+msgid "Second edit box input"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:71
+msgid "Window setting"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:90
+msgid "Context menu"
+msgstr "上下文菜单"
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:91
+msgid "Float widget"
+msgstr "浮动控件"
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:264
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:267
+msgid "Usable variable: svga, vga, mobile, ref_width, ref_height"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:270
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:273
+msgid ""
+"Usable variable: svga, vga, mobile, ref_width, ref_height, width, height"
+msgstr ""
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1073
+msgid "Parent menu $menu"
+msgstr "父菜单$menu"
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1125
+msgid "New float widget"
+msgstr "新建悬浮控件"
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1164
+msgid "Do you want to erase this float widget?"
+msgstr "您想移除该浮动控件吗？"
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1202
+msgid "Original ID"
+msgstr "原标识"
+
+#: apps-src/apps/studio/gui/dialogs/window_setting.cpp:1205
+msgid "Rename float widget"
+msgstr "重命名浮动控件"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:399
+msgid "Pass"
+msgstr "通过"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:602
+msgid "Preivew"
+msgstr "预览"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:646
+msgid "Back to design"
+msgstr "回到设计图"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:848
+msgid "$id holds grid that not all spacer. Do you want to delete?"
+msgstr "$id包含不是空的网格，真要地删除吗？"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1044
+msgid "widget($widget) is _main_map, it must be default style's spacer."
+msgstr "($widget)是大地图，必须是default风格的spacer控件。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1049
+msgid "widget($widget) is _mini_map, it must be blits style's image."
+msgstr "($widget)是大地图，必须是blits风格的image控件。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1055
+msgid "widget($widget) is label, it's vertical align must not set edge."
+msgstr "($widget)设置了文本，垂直方向不能设置为两端对齐。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1057
+msgid ""
+"widget($widget) is label, and set width_is_max, best_height must be empty."
+msgstr "($widget)设置了可能多行文本，标称高度都必须是空。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1065
+msgid "widget($widget) is stack, there is all spacer layer."
+msgstr "($widget)是栈层控件，存在全是占位控件的网格。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1077
+msgid ""
+"widget($widget) is scroll_panel and best height is 0, there is tow or more "
+"rows in one column, it's row's grow_factor must be set >= 1."
+msgstr ""
+"($widget)设置了可滚动面板，标称高度是0，而且一列中有两行甚至更多，它的行"
+"grow_facotr必须>=1。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1084
+msgid ""
+"widget($widget) is scroll_panel, and has multiline widget, it's width must "
+"be empty."
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1095
+msgid ""
+"widget($widget) is listbox and has left drag_grid, must not in scroll panel. "
+"Maybe implete by LongPress."
+msgstr ""
+"($widget)是带有左滑网格的列表，不能出现在滚动面板。或许可用长按去实现。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1108
+msgid "widget($widget) is tree view, only one row in 1th grid."
+msgstr "($widget)是树形控件，节点的顶层网格只能存在一行。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1110
+msgid ""
+"widget($widget) is foldable tree view, first widget must be tree_node's "
+"style toggle_button."
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1112
+msgid ""
+"widget($widget) is foldable tree view, first widget's grow_factor must be 0."
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1116
+msgid ""
+"widget($widget) is unable fold tree view, first widget must not be "
+"tree_node's style toggle_button."
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1122
+msgid "widget($widget) is template widget, it's id must not empty."
+msgstr "($widget)是模板控件，id字段不能是空。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1129
+msgid "widget($widget) set multiline, it's label_is_text must be yes."
+msgstr "($widget)设置了可能多行文本，它的label_is_text必须是yes。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1132
+msgid "widget($widget) set multiline, must not set linked_group."
+msgstr "($widget)设置了可能多行文本，不能再设置等尺寸组。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1140
+msgid "widget($widget) set multiline, must not in tree's node."
+msgstr "($widget)设置了可能多行文本，不能出现在树形的节点网格。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1153
+msgid ""
+"widget($widget) set multiline, there is tow or more cols in one row, it's "
+"col's grow_factor must be set >= 1."
+msgstr ""
+"($widget)设置了可能多行文本，而且所在的行又存在多个控件，它的列grow_facotr必"
+"须>=1。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1160
+msgid "widget($widget) set multiline, it's horizontal align must not set edge."
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1166
+msgid "widget($widget) set multiline, it's vertical align must not set edge."
+msgstr "($widget)设置了可能多行文本，垂直方向不能设置为两端对齐。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1173
+msgid ""
+"widget($widget) set multiline, both best_width and best_height must be empty."
+msgstr "($widget)设置了可能多行文本，标称宽度和高度都必须是空。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1183
+msgid ""
+"widget($widget) is scorllable widget, best width is 0, must set horizontal "
+"align to edge."
+msgstr ""
+"($widget)是滚动控件，而且设置了标称宽度是0，那水平方向必须设置为两端对齐。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1188
+msgid ""
+"widget($widget) is scorllable widget, best height is 0, must set vertical "
+"align to edge."
+msgstr ""
+"($widget)是滚动控件，而且设置了标称高度是0，那垂直方向必须设置为两端对齐。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1241
+msgid "Window isn't ready!"
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1286
+msgid "Load"
+msgstr "读取"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1292
+msgid "Save As"
+msgstr "另存为"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1295
+msgid "Preferences"
+msgstr "首选项"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1298
+#: apps-src/apps/studio/mkwin_controller.cpp:1612
+msgid "Quit"
+msgstr "退出"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1410
+msgid "Choose a Window to Open"
+msgstr "选择要打开的窗口"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1412
+msgid "gui/scene"
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1414
+#: apps-src/apps/studio/mkwin_controller.cpp:1546
+msgid "gui/window"
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1445
+msgid "Invalid dialog cfg file!"
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1542
+msgid "Choose a Window to Save"
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1544
+msgid "data/themes"
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1605
+msgid "Do you really want to quit?"
+msgstr "您真的想退出吗？"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1609
+msgid "Changes in the $window since the last save will be lost."
+msgstr "之前在$window所做的修改将丢失。"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1670
+msgid "Once unpake, can not be back to template. Do you want to unpake $id?"
+msgstr "一旦拆散，就不能恢复回模板。您真的要拆散$id吗？"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1693
+msgid "Select desire unpack orientation"
+msgstr "选择要展开的朝向"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1796
+msgid "Do you want to generate template widget($id) at $file?"
+msgstr "要在$file创建/修改模板控件（$id）吗？"
+
+#: apps-src/apps/studio/mkwin_controller.cpp:1798
+msgid ""
+"It will modify relative *.cfg. After build, exit Studio, then run again."
+msgstr "将会修改相关cfg文件。在重新Build后，请退出Studio，然后重新运行。"
+
+#: apps-src/apps/studio/mkwin_display.cpp:53
+msgid ""
+"Cannot find widget definition(id: $id, type: $type, definition: "
+"$definition)! Force to use definition $default."
+msgstr ""
+
+#: apps-src/apps/studio/mkwin_display.cpp:190
+msgid "Grid"
+msgstr ""
+
+#~ msgid "Generate msgid from *.cfg"
+#~ msgstr "生成*.cfg中的msgid"
+
+#~ msgid "Copy resource to android's apk"
+#~ msgstr "预复制资源到Android的apk包"
+
+#~ msgid "Maybe multiline"
+#~ msgstr "可能多行"
+
+#~ msgid "Max size"
+#~ msgstr "最大尺寸"
+
+#~ msgid "widget($widget) set multiline, only label support."
+#~ msgstr "($widget)设置了可能多行文本，只有文本控件才支持。"
+
+#~ msgid "Design"
+#~ msgstr "设计"
+
+#~ msgid "File"
+#~ msgstr "文件"
+
+#~ msgid "Operation"
+#~ msgstr "运算"
+
+#~ msgid "Size"
+#~ msgstr "尺寸"
+
+#~ msgid "Select"
+#~ msgstr "选择"
+
+#~ msgid ""
+#~ "Generate tensorflow project files for $app| from \"$src\" to \"$dst\", "
+#~ "$result!"
+#~ msgstr "从$src产生$app的Tensorflow工程文件到$dst，$result！"
+
+#~ msgid "TensorFlow project"
+#~ msgstr "TensorFlow工程"
+
+#~ msgid "widget($widget) is scroll_panel, it's width must be empty."
+#~ msgstr "($widget)是滚动面板控件，width字段必须留空。"
+
+#~ msgid "Horizontal layout"
+#~ msgstr "水平布局"
+
+#~ msgid "Vertical layout"
+#~ msgstr "垂直布局"
+
+#~ msgid "Align left. Maybe stretch"
+#~ msgstr "左对齐。可能放大"
+
+#~ msgid "Align top. Maybe stretch"
+#~ msgstr "上对齐。可能放大"
+
+#~ msgid ""
+#~ "Once press \"Create\", will modify relative *.cfg. After build, exit "
+#~ "Studio, then run again."
+#~ msgstr ""
+#~ "一旦单击“创建”，会修改相关cfg文件。在重新Build后，请退出Studio，然后重新运"
+#~ "行。"
+
+#~ msgid "Pack template widget"
+#~ msgstr "创建或修改模板控件"
+
+#~ msgid "Use to double orientation's portrait"
+#~ msgstr "用于双朝向时的竖屏"
+
+#~ msgid "widget($widget) is stack, there is all spacer layer!"
+#~ msgstr "($widget)是栈层控件，存在全是占位控件的网格！"
+
+#~ msgid ""
+#~ "The $field calculated according to the content at that time is the best "
+#~ "$field, but maximum should not exceed $size."
+#~ msgstr "根据当时内容算出的$field作为标称$field，但最大不能超过$size。"
+
+#~ msgid "Best $field is fixed to $size."
+#~ msgstr "标称$field固定为$size。"
+
+#~ msgid "Unit $field is fixed to $size."
+#~ msgstr "单元$field固定为$size。"
+
+#~ msgid "Usable variable: ref_width, ref_height, width, height"
+#~ msgstr "可使用变量：ref_width, ref_height, width, height"
+
+#~ msgid "Change the language"
+#~ msgstr "切换语言"
+
+#~ msgid "Configure the game's settings"
+#~ msgstr "配置游戏的各项设置"
+
+#~ msgid "Ownership"
+#~ msgstr "归属"
+
+#~ msgid "Profile player hero"
+#~ msgstr "配置玩家武将"
+
+#~ msgid "Start the dialog editor"
+#~ msgstr "开始编辑对话框"
+
+#~ msgid "New theme"
+#~ msgstr "新建主题"
+
+#~ msgid "theme"
+#~ msgstr "场景"
+
+#~ msgid "(bottom-right)"
+#~ msgstr "（右下角）"
+
+#~ msgid "(top-left)"
+#~ msgstr "（左上角）"
+
+#~ msgid "Change"
+#~ msgstr "修改"
+
+#~ msgid "Start the theme editor"
+#~ msgstr "开始编辑场景"
+
+#~ msgid "Type"
+#~ msgstr "类型"
+
+#~ msgid "Use rect layout"
+#~ msgstr "使用矩形进行布局"
+
+#~ msgid "rect^ref"
+#~ msgstr "参考矩形"
+
+#~ msgid "xanchor"
+#~ msgstr "水平方向行为"
+
+#~ msgid "yanchor"
+#~ msgstr "垂直方向行为"
+
+#~ msgid "$field1 fixed, $field2 fixed"
+#~ msgstr "$field1固定，$field2固定"
+
+#~ msgid "$field1 fixed, $field2 scalable"
+#~ msgstr "$field1固定，$field2可能变化"
+
+#~ msgid "$field1 scalable, $field2 fixed"
+#~ msgstr "$field1可能变化，$field2固定"
+
+#~ msgid "Rectangle"
+#~ msgstr "矩形"
+
+#~ msgid "Absolute"
+#~ msgstr "绝对值"
+
+#~ msgid "ref's $field"
+#~ msgstr "参考矩形的$field"
+
+#~ msgid "My $field"
+#~ msgstr "自个矩形的$field"
+
+#~ msgid "$id is absolute type, must not be contain '+' or '-'!"
+#~ msgstr "$id是绝对值类型，不能含有‘+’或‘-’！"
+
+#~ msgid "Check for errors in the $window"
+#~ msgstr "检查$window中的错误"
+
+#~ msgid "New patch"
+#~ msgstr "新补丁"
+
+#~ msgid "Rename patch"
+#~ msgstr "重命名补丁"
+
+#~ msgid "Patch"
+#~ msgstr "补丁"
+
+#~ msgid "Import $apps from \"$src\" successfully!"
+#~ msgstr "从$src成功导入$apps！"
+
+#~ msgid "New dialog(id = $id) to $app successfully!"
+#~ msgstr "成功在$app新建对话框（id = $id）！"
+
+#~ msgid "New dialog(id = $id) to $app, $result!"
+#~ msgstr "在$app新建对话框（id = $id），$result！"
+
+#~ msgid "Do you want to extract $app package to $dst?"
+#~ msgstr "您想提取$app包，把它放在$dst吗？"
+
+#~ msgid "Extract $app package from \"$src\" to \"$dst\", $result!"
+#~ msgstr "提到$app包，从“$src”到“$dst”，$result！"
+
+#~ msgid "Remove $app"
+#~ msgstr "移除$app"
+
+#~ msgid "Do you want to remove $app from work packet?"
+#~ msgstr "你想从工作包移动$app吗？"
+
+#~ msgid "Directory"
+#~ msgstr "目录"
+
+#~ msgid "Delete $type, from $dst fail!"
+#~ msgstr "从$dst删除$type失败！"
+
+#~ msgid "Files"
+#~ msgstr "多个文件"
+
+#~ msgid "Add $app, $result!"
+#~ msgstr "添加$app，$result！"
+
+#~ msgid "Add app"
+#~ msgstr "添加app"
+
+#~ msgid "Change Resolution"
+#~ msgstr "改变分辨率"
+
+#~ msgid "Description"
+#~ msgstr "描述"
+
+#~ msgid "Full Screen"
+#~ msgstr "全屏显示"
+
+#~ msgid "Quit the game"
+#~ msgstr "退出游戏"

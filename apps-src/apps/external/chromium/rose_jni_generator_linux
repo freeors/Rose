@@ -1,0 +1,5 @@
+chromium/src$ ./base/android/jni_generator/jni_generator.py --includes base/android/jni_generator/jni_generator_helper.h --jar rt.jar --input_file java/lang/Runnable.class --output_file jni/Runnable_jni.h
+
+chromium/src$ ./base/android/jni_generator/jni_generator.py --includes base/android/jni_generator/jni_generator_helper.h --jar rt.jar --input_file java/lang/Runtime.class --output_file jni/Runtime_jni.h
+
+chromium/src$ ./base/android/jni_generator/jni_generator.py --includes base/android/jni_generator/jni_generator_helper.h --input_file base/android/java/src/org/chromium/base/task/TaskRunnerImpl.java --output_file jni/TaskRunnerImpl_jni.h
